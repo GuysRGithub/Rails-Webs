@@ -1,0 +1,2 @@
+class Scense < ApplicationRecord
+end

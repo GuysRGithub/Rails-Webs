@@ -1,0 +1,119 @@
+$li-icon-size: 60px;
+$line-height: $li-icon-size * 0.6;
+$icon-size: $li-icon-size / 3;
+.page-title
+{
+    color: transparent;
+    font-size: $icon-size;
+    // color: rgb(39, 178, 202);
+    -webkit-text-stroke: 2px #28a4ec;
+}
+nav {
+  line-height: 60px;
+  margin: 0;
+  vertical-align: center;
+  /* align center vertical */
+}
+
+.navigation-web {
+  li {
+    display: inline-end;
+    float: right;
+    list-style: none;
+  }
+  
+  li {
+    border-radius: 50%;
+    box-sizing: content-box;
+    height: $li-icon-size;
+    list-style: none;
+    margin: 0 10px;
+    position: relative;
+    width: $li-icon-size;
+  }
+
+  li::before,
+  li::after {
+    background: #000;
+    border-radius: 50%;
+    content: "";
+    filter: blur(12px);
+    height: 100%;
+    left: 0;
+    opacity: 0.1;
+    position: absolute;
+    top: 0;
+    transition: 1s;
+    width: 100%;
+    z-index: -1;
+  }
+
+  li::after {
+    filter: blur(40px);
+  }
+
+  li:hover::before,
+  li:hover::after {
+    opacity: 1;
+  }
+
+  li a {
+    background: #000;
+    border-radius: 50%;
+    bottom: 10px;
+    color: #fff;
+    font-size: $icon-size;
+    left: 10px;
+    line-height: $line-height;
+    position: absolute;
+    right: 10px;
+    text-align: center;
+    top: 10px;
+  }
+
+  li a .fa {
+    opacity: 0.2;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transform: rotateY(0deg) scale(0.8);
+    transition: 0.5s;
+  }
+
+  li a:hover .fa {
+    opacity: 1;
+    transform: scale(1.6);
+  }
+
+  li:nth-child(1) a,
+  li:nth-child(1)::before,
+  li:nth-child(1)::after {
+    background: linear-gradient(45deg, #ff0057, #e64a19);
+  }
+
+  li:nth-child(2) a,
+  li:nth-child(2)::before,
+  li:nth-child(2)::after {
+    background: linear-gradient(45deg, #82c4eb, #0b98e9);
+  }
+
+  li:nth-child(3) a,
+  li:nth-child(3)::before,
+  li:nth-child(3)::after {
+    background: linear-gradient(45deg, #22c79e, #5de6d3);
+  }
+
+  li:nth-child(4) a,
+  li:nth-child(4)::before,
+  li:nth-child(4)::after {
+    background: linear-gradient(45deg, #e47309, #ee2f2f);
+  }
+
+  li:nth-child(5) a,
+  li:nth-child(5)::before,
+  li:nth-child(5)::after {
+    background: linear-gradient(45deg, #ff00dd, #e64a19);
+  }
+}
+
+// ul {
+
+// }

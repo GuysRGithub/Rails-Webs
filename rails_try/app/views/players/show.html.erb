@@ -1,0 +1,23 @@
+<%= content_for :title do %>
+<%=h @player.first_name %> Profile
+  
+<% end %>
+  <body>
+    <h1>This Page If For You: <%=h @player.first_name%> :"))</h1>
+    <table>
+      <thead>
+        <tr>
+          <td>First Name</td>
+          <td>Last Name</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><%=h @player.first_name%></td>
+          <td><%=h @player.last_name%></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+  <%= link_to 'Home Page', players_path %>
+

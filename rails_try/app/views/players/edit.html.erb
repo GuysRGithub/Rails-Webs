@@ -1,0 +1,8 @@
+<%= content_for :title do %>
+Edit <%=h @player.first_name%> Profile
+  
+<% end %>
+    <h1>Hello <%=h @player.first_name%> :)</h1>
+    <%= render partial: 'players/form' %>
+
+

@@ -1,0 +1,107 @@
+$p-szie: 300px;
+$content-padding: 48px;
+$ring-color-border: #ffffff;
+
+
+section {
+  padding-top: 20px;
+  .container-description {
+    align-items: center;
+    display: flex;
+    height: $p-szie;
+    justify-content: center;
+    margin-left: 20px;
+    margin-top: 20px;
+    position: relative;
+    width: $p-szie;
+
+    .content-description {
+      color: rgb(255, 255, 255);
+      padding: $content-padding;
+      text-align: center;
+      z-index: 2;
+    }
+
+    span:nth-child(1) {
+      animation: animate1 6s linear infinite;
+      border: 2px solid $ring-color-border;
+      border-radius: 38% 62% 64% 37% / 42% 44% 56% 60%;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      transition: 0.5s;
+      width: 100%;
+      z-index: 2;
+    }
+
+    &:hover span:nth-child(1) {
+      background: rgba(47, 47, 216, 0.6);
+      border: none;
+      z-index: 2;
+    }
+
+    span:nth-child(2) {
+      animation: animate2 4s linear infinite;
+      border: 2px solid $ring-color-border;
+      border-radius: 38% 62% 64% 37% / 42% 44% 56% 60%;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      transition: 0.5s;
+      width: 100%;
+      z-index: 2;
+    }
+
+    &:hover span:nth-child(2) {
+      background: rgba(220, 235, 231, 0.4);
+      border: none;
+      z-index: 2;
+    }
+
+    span:nth-child(3) {
+      animation: animate3 12s linear infinite;
+      border: 2px solid $ring-color-border;
+      border-radius: 38% 62% 64% 37% / 42% 44% 56% 60%;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      transition: 0.5s;
+      width: 100%;
+      z-index: 2;
+    }
+
+    &:hover span:nth-child(3) {
+      background: rgba(24, 142, 197, 0.2);
+      border: none;
+    }
+
+    @keyframes animate1 {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes animate2 {
+      0% {
+        transform: rotate(360deg);
+      }
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+    @keyframes animate3 {
+      0% {
+        transform: rotate(180deg);
+      }
+      100% {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+}

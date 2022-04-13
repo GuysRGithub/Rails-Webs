@@ -1,0 +1,143 @@
+// Place all the styles related to the public controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+@use 'icon_header_style';
+body {
+  background: linear-gradient(to left, #697c81, #84c7e9, #8e949e);
+  font: 15px/1.5;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  margin: 0px;
+  padding: 0px;
+  /* full width and height */
+}
+header {
+  background: #3b3938;
+  border-bottom: #0e81ce solid 3px;
+  color: #ffffff;
+  min-height: 80px;
+  padding-bottom: 0px;
+  padding-top: 0px;
+  /* padding: 10px 0px 20px; */
+
+  .container-header {
+    margin: auto;
+    overflow: hidden;
+    padding: 0px !important;
+    width: 80%;
+  }
+
+  .page-title {
+    float: left;
+  }
+ 
+  .link-li {
+    color: red($color: #ff0000);
+  }
+}
+
+#description {
+  background: url(asset_path("air.jpg"));
+  background-size: 100% 100%;
+  border-bottom: #6eb2d4 1px solid;
+  color: #ffffff;
+  min-height: 360px;
+  text-align: left;
+  z-index: -1;
+  /* margin-top: -20px; */
+}
+
+
+/* Subcribe */
+.subcribe {
+  background: #35424a;
+  color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  height: 48px;
+  justify-content: center;
+  padding: 15px;
+}
+
+.subcribe .subcribe-container {
+  width: 80%;
+  /* 80% width to float right */
+}
+.subcribe .subcribe-container h1 {
+  float: left;
+  margin: 0;
+  padding-top: 10px;
+}
+.subcribe form {
+  float: right;
+  margin-right: 12px;
+  transition: 0.5s;
+}
+.subcribe input[type="email"] {
+  background: rgb(224, 228, 238);
+  border-radius: 12px;
+  height: 28px;
+  outline: none;
+  padding: 8px;
+  transition: 0.5s;
+  width: 280px;
+}
+
+.subcribe-container form button {
+  border-radius: 12px;
+  cursor: pointer;
+  height: 48px;
+  outline: none;
+  padding: 0 20px 0 20px;
+}
+.grid-view {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.layout {
+  display: flex;
+  flex-direction: row;
+}
+.menu {
+  background: #4246493a;
+  border-radius: 12px;
+  border-right: #35424a solid 3px;
+  float: left;
+  margin: 18px 8px 16px 26px;
+  width: 20%;
+}
+.menu li {
+  border-bottom: #525557 solid 2px;
+  justify-content: space-around;
+  list-style: none;
+  padding-bottom: 20px;
+  padding-right: 20px;
+  width: 80%;
+}
+.menu li .icon-leading {
+  float: left;
+  height: 32px;
+  width: auto;
+}
+.menu li h2 {
+  margin-left: 20px;
+  padding-left: 20px;
+}
+.grid-view {
+  background: #7bd2e7be;
+  border-radius: 12px;
+  float: right;
+  margin: 18px 8px 16px 26px;
+  width: 80%;
+}
+.grid-view div {
+  border: #3da0e250 solid 2px;
+  border-radius: 12px;
+  margin: 20px;
+  padding: 0 48px 0 48px;
+  text-align: justify;
+}
+.grid-view h1 {
+  text-align: start;
+}
+

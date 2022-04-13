@@ -1,0 +1,10 @@
+<li class="p2 border-bottom">
+    <span class="icon is-small"><i class="fa fa-pencil"></i>created project</span>
+    
+    <% if activity.trackable %>
+        <%= link_to activity.trackable.name, activity.trackable %>
+    <% else %>
+        which has since been removed
+    <% end %>
+    
+</li>

@@ -1,0 +1,27 @@
+<section class="section">
+  <%= content_tag :div, id: 'team-form',
+    data: {
+        id: @team.id,
+        team: @team.to_json(except: [:id, :created_at, :update_at]),
+        user_attributes: @team.users.to_json(except: [:created_at, :update_at])
+    } do %>
+    <div class="column is-5" :class="{formstatic: scrollPosition < 100, formfixed: scrollPosition > 100}">
+      <h1 class="subtitle is-2">Create new team</h1>
+      <%= render 'form', team: @team %>
+    </div>
+    <table class="column is-5" :class="{datastatic: scrollPosition < 100, datafixed: scrollPosition > 100}">
+      <div class="subtitle is-3">{{ team.name }}</div>
+      <div class="table is-fillwidth" v-if="team.user_attributes.length">
+        <thead>
+          <th>Name</th>
+          <th>Email</th>
+        </thead>
+        <tr class="user" v-for="(user, index) in team.user_attributes">
+          <td> {{user.name}} </td>
+          <td> {{user.email}} </td>
+        </tr>
+      </div>
+    </table>
+    <%= render 'form', team: @team %>
+  <% end %>
+</section>
